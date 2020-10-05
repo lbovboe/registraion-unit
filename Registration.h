@@ -35,6 +35,8 @@ class Registration
 
         Unit getUnit(unsigned index);
 
+        void setUnit(unsigned index, Unit u);
+
 
     private:
         long m_studentId;             // student ID number

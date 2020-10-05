@@ -1,5 +1,6 @@
 
 #include "operatorOverload.h"
+#include "Registration.h"
 
 // out put string for the whole unit
 ostream &operator<<(ostream &stream, const Unit &u)
@@ -24,13 +25,7 @@ istream &operator>>(istream &input, Unit &u)
     return input;
 }
 // output string for whole registration info
-ostream &operator<<(ostream &stream, const Registration &r)
-{
-    stream << "Your Murdoch Student Id is : " << r.getStudentId() << "\n"
-           << "The semester is : " << r.getSemester() << "\n"
-           << "Total number of Units: " << r.getCount() << endl;
-    return stream;
-}
+
 
 istream &operator>>(istream &input, Registration &r)
 {
@@ -45,9 +40,26 @@ istream &operator>>(istream &input, Registration &r)
 
     for (int i = 0; i < r.getCount(); i++)
     {
-        //Unit u = r.getUnit(i);
-        input >> r.getUnit(i);
+        Unit u = r.getUnit(i);
+        u.setName("hi");
+        //input >> u; // what's the purpose of this line??
+        
     }
 
     return input;
+}
+
+ostream &operator<<(ostream &stream, const Registration &r)
+{
+    
+    stream << "Your Murdoch Student Id is : " << r.getStudentId() << "\n"
+           << "The semester is : " << r.getSemester() << "\n"
+           << "Total number of Units: " << r.getCount() << "\n" ;
+           //<<"the unit name" << ;
+           // << "The Unit name is : " << r.getUnit();
+        //    for(int i = 0; i < r.getCount() ; i++){
+        //        r.getUnit(i).getName();
+        //    }
+
+    return stream;
 }

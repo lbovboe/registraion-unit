@@ -8,15 +8,18 @@ int main(int argc, char const *argv[])
 {
     Unit u;
     Registration r;
-    cout << r;
-    cout << u;
+    //cout << r;
+    //cout << u;
 
     string fileName = "rinput.txt";
     ifstream infile(fileName.c_str());
     if (infile.is_open()) { // If the can be opened
         while (infile.peek() != EOF) { // While the next character is not en of the file
-            infile>>u;
-            cout << u;
+            infile>>r;
+            cout << r;
+            // int count =0;
+            // count ++;
+            cout << r.getUnit(0);
         }
         infile.close(); // Close the file
     } else {
