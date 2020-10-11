@@ -40,8 +40,10 @@ istream &operator>>(istream &input, Registration &r)
 
     for (int i = 0; i < r.getCount(); i++)
     {
-        Unit u = r.getUnit(i);
-        u.setName("hi");
+        Unit u;
+        //u.setName("hi");
+        input >> u;
+        r.setUnit(i,u);
         //input >> u; // what's the purpose of this line??
         
     }

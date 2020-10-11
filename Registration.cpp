@@ -70,6 +70,6 @@ Unit Registration::getUnit(unsigned index){
   return m_unit[index];
 }
 
-void Registration::setUnit(unsigned index, Unit u){
+void Registration::setUnit(unsigned index, Unit &u){
   this->m_unit[index] = u;
 }

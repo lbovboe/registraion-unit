@@ -35,7 +35,7 @@ class Registration
 
         Unit getUnit(unsigned index);
 
-        void setUnit(unsigned index, Unit u);
+        void setUnit(unsigned index, Unit &u);
 
 
     private:

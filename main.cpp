@@ -19,7 +19,10 @@ int main(int argc, char const *argv[])
             cout << r;
             // int count =0;
             // count ++;
-            cout << r.getUnit(0);
+            for(int i =0; i<r.getCount();i++){
+                cout << r.getUnit(i);
+            }
+            
         }
         infile.close(); // Close the file
     } else {
